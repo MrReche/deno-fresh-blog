@@ -38,7 +38,7 @@ export async function listPosts(): Promise<Post[]> {
   const posts = await Promise.all(promises) as Post[];
 
   posts.sort((a, b) => {
-    return b.date.getTime() - a.date.getTime(); //descendiente de + a -
+    return b.date.getTime() - a.date.getTime(); //descendiente de + a - de mas nueva a mas vieja si fuese Ascendente es a - b
   });
 
   return posts;
