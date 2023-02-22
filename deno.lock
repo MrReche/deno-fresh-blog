@@ -1,6 +1,10 @@
 {
   "version": "2",
   "remote": {
+    "https://cdn.skypack.dev/-/axios@v0.26.1-3c1TUCVdnljWzSKyoXbP/dist=es2019,mode=imports/optimized/axios.js": "7ef899fe58dfb9090ef1d26dcb44333976f4f8a34415930a5c20218155f68c3d",
+    "https://cdn.skypack.dev/-/form-data@v4.0.0-jtCpCmyQPfg31uIBEq5z/dist=es2019,mode=imports/optimized/form-data.js": "71365fbe9ee163239a3dd22878340b574ede72181086dfaa45dbeb188501d550",
+    "https://cdn.skypack.dev/-/openai@v3.1.0-5jrxU6fs5aNvY2wilc7C/dist=es2019,mode=imports/optimized/openai.js": "014999947a87250da166a39ef2f8c2d84480e2322fa08d6b2197ad6de86e0aa3",
+    "https://cdn.skypack.dev/openai": "4e36c9cb39e4e6fad7c48b76d658e476babfb3c6f5ac3f1db9c586e0afa494f9",
     "https://deno.land/std@0.140.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
     "https://deno.land/std@0.140.0/_util/os.ts": "3b4c6e27febd119d36a416d7a97bd3b0251b77c88942c8f16ee5953ea13e2e49",
     "https://deno.land/std@0.140.0/fs/_util.ts": "0fb24eb4bfebc2c194fb1afdb42b9c3dda12e368f43e8f2321f84fc77d42cb0f",

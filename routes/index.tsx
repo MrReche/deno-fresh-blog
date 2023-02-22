@@ -4,6 +4,7 @@ import { logo } from "../utils/assets.ts";
 import { listPosts } from "../utils/posts.ts";
 import { Component, h } from "preact";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import ChatAI from "../islands/ChatAI.tsx";
 
 export const handler: Handlers = {
   async GET(req, context) {
@@ -97,6 +98,12 @@ export default function Home(props: PageProps) {
             </article>
           </a>
         ))}
+        <div>
+          <h2 class="text-purple-800 text-3xl font-bold pt-4 pb-3">
+            Talk to me
+          </h2>
+          <ChatAI />
+        </div>
       </main>
     </div>
   );
