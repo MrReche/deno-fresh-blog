@@ -85,9 +85,9 @@ export default function Home(props: PageProps) {
           </div>
         </div>
         {posts.map((post: Post) => (
-          <a class="hover:text-blue-600" href={`/blog/${post.id}`}>
+          <a href={`/blog/${post.id}`}>
             <article
-              class="p-4 mt-4 mb-4 hover:text-blue-600"
+              class="p-4 mt-4 mb-4 hover:bg-blue-100"
               style={{ border: "0.2rem solid black", borderRadius: "0.5rem" }}
             >
               <h2 class="text-2xl font-bold">
