@@ -17,7 +17,8 @@ export default function PagePost(props: PageProps) {
   return (
     <article class="p-4">
       <header class="pb-4">
-        <h1 class="text-2xl font-bold">{post.title}</h1>
+        <a class="hover:text-blue-500" href="/">⬅️ Back</a>
+        <h1 class="text-2xl font-bold pt-5">{post.title}</h1>
         <time>{Intl.DateTimeFormat("es").format(post.date)}</time>
       </header>
       <Button />
