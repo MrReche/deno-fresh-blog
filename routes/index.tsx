@@ -29,7 +29,7 @@ export default function Home(props: PageProps) {
     >
       <main>
         <header>
-          <h1 class="text-4xl font-bold">Pere Reche</h1>
+          <h1 class="text-4xl font-bold">Pere Reewrwerwerwerwerweche</h1>
           <p class="text-xl">@mr.reche</p>
 
           <h2 class="text-sm font-bold pt-3">
