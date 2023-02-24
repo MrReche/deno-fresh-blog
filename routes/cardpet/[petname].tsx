@@ -39,7 +39,7 @@ export default function Page({ data }: PageProps<PetProfile | null>) {
         <link rel="stylesheet" href="/cardpet.css" />
       </Head>
       <main
-        class="p-4"
+        class="sm:p-4 pt-4 pb-4 pl-2 pr-2"
         style={{
           display: "flex",
           flexDirection: "column",
