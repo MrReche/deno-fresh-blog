@@ -4,22 +4,32 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_middleware.ts";
-import * as $1 from "./routes/api/joke.ts";
-import * as $2 from "./routes/blog/[id].tsx";
-import * as $3 from "./routes/index.tsx";
+import * as $1 from "./routes/about.tsx";
+import * as $2 from "./routes/api/joke.ts";
+import * as $3 from "./routes/api/random-uuid.ts";
+import * as $4 from "./routes/blog/[id].tsx";
+import * as $5 from "./routes/cardpet/[petname].tsx";
+import * as $6 from "./routes/greet/[name].tsx";
+import * as $7 from "./routes/index.tsx";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/ChatAI.tsx";
+import * as $$2 from "./islands/InputCardPet.tsx";
 
 const manifest = {
   routes: {
     "./routes/_middleware.ts": $0,
-    "./routes/api/joke.ts": $1,
-    "./routes/blog/[id].tsx": $2,
-    "./routes/index.tsx": $3,
+    "./routes/about.tsx": $1,
+    "./routes/api/joke.ts": $2,
+    "./routes/api/random-uuid.ts": $3,
+    "./routes/blog/[id].tsx": $4,
+    "./routes/cardpet/[petname].tsx": $5,
+    "./routes/greet/[name].tsx": $6,
+    "./routes/index.tsx": $7,
   },
   islands: {
     "./islands/Button.tsx": $$0,
     "./islands/ChatAI.tsx": $$1,
+    "./islands/InputCardPet.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

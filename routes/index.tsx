@@ -5,10 +5,10 @@ import { listPosts } from "../utils/posts.ts";
 import { Component, h } from "preact";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import ChatAI from "../islands/ChatAI.tsx";
+import InputCardPet from "../islands/InputCardPet.tsx";
 
 export const handler: Handlers = {
   async GET(req, context) {
-    console.log(context.state.data, "-middleware data");
     const posts = await listPosts();
     return context.render({ posts });
   },
@@ -20,7 +20,7 @@ export default function Home(props: PageProps) {
 
   return (
     <div
-      class="p-10 pt-20"
+      class="sm:p-10 sm:pt-20 p-5"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -29,14 +29,23 @@ export default function Home(props: PageProps) {
     >
       <main>
         <header>
-          <h1 class="text-4xl font-bold">Pere Reewrwerwerwerwerweche</h1>
+          <h1 class="text-4xl font-bold">Pere Reche</h1>
           <p class="text-xl">@mr.reche</p>
 
           <h2 class="text-sm font-bold pt-3">
             Hey, I'm Pere. I'm a{" "}
-            <strong>software developer at Lovecoding it</strong>
-            , specialist in frontend. This blog is made with Deno, Preact and
-            Twind.
+            <strong>
+              software developer at{" "}
+              <a
+                class="hover:text-red-600"
+                target="_blank"
+                href="https://lovecoding.it"
+              >
+                lovecoding it
+              </a>
+            </strong>
+            , specialist in frontend. This blog is made with Deno,Deno fresh,
+            Preact and Twind.
           </h2>
         </header>
         <div
@@ -98,6 +107,14 @@ export default function Home(props: PageProps) {
             </article>
           </a>
         ))}
+        <div>
+          <h2 class="text-pink-900 text-3xl font-bold pt-4 pb-3">
+            Generate your random doggy card
+          </h2>
+          <div>
+            <InputCardPet />
+          </div>
+        </div>
         <div>
           <h2 class="text-purple-800 text-3xl font-bold pt-4 pb-3">
             Talk to me

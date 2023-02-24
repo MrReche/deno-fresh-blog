@@ -1,7 +1,7 @@
-import { getChatAI } from "./openai.ts";
+import { getChatAI } from "../openai.ts";
 import { assertEquals } from "$std/testing/asserts.ts";
 
-Deno.test("getChatAI() return null is doesn exists", async () => {
+Deno.test("getChatAI() retutertertrn null is doesn exists", async () => {
   const post = await getChatAI("nofgdfgn-existent");
   assertEquals(post, null);
 });

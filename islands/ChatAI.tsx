@@ -59,9 +59,9 @@ export default function ChatAI(props: JSX.HTMLAttributes<HTMLButtonElement>) {
       <div
         style={{
           display: "flex",
-          gap: 6,
           flexWrap: "wrap",
           height: "2rem",
+          gap: "0.3rem",
         }}
       >
         <input
@@ -74,7 +74,7 @@ export default function ChatAI(props: JSX.HTMLAttributes<HTMLButtonElement>) {
             borderRadius: "0.4rem",
             padding: 5,
             borderColor: "purple",
-            minWidth: "90%",
+            width: "80%",
           }}
         />
         <button
