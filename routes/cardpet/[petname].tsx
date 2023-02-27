@@ -1,7 +1,9 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { FaDog } from "react-icons/fa";
 import { Head } from "$fresh/runtime.ts";
-import { useState } from "https://esm.sh/v106/preact@10.11.0/hooks/src/index";
+import { useState } from "preact/hooks/src/index";
+import html2canvas from "$esm/html2canvas@1.4.1";
+import jsPDF from "$esm/jspdf@2.5.1";
 
 interface PetProfile {
   petname: string;
@@ -32,6 +34,20 @@ export const handler: Handlers<PetProfile | null> = {
   },
 };
 
+const handleDownload = () => {
+  const petCard = document.getElementById("petCardDiv");
+  console.log("Hola");
+  if (petCard != null) {
+    html2canvas(petCard)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, "PNG", 0, 0);
+        pdf.save("download.pdf");
+      });
+  }
+};
+
 export default function Page({ data }: PageProps<PetProfile | null>) {
   return (
     <>
@@ -54,6 +70,12 @@ export default function Page({ data }: PageProps<PetProfile | null>) {
           style={{ width: "22rem" }}
         >
           <a class="hover:text-blue-500" href="/">⬅️ Back</a>
+          <button
+            class="border-2 p-1 active:outline-none rounded-md bg-purple-100 hover:bg-purple-200 border-current"
+            onClick={() => handleDownload()}
+          >
+            Download
+          </button>
           <a
             href={data.petname ? "/cardpet/" + data.petname : "/"}
             class="border-2 p-1 rounded-md bg-pink-100 hover:bg-pink-200 border-current"
@@ -62,6 +84,7 @@ export default function Page({ data }: PageProps<PetProfile | null>) {
           </a>
         </div>
         <div
+          id="petCardDiv"
           class="pt-10 pb-10 pl-6 pr-6 area"
           style={{
             display: "flex",

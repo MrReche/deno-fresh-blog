@@ -16,16 +16,17 @@ export default function InputCardPet() {
       }}
     >
       <input
+        name="petname"
+        onInput={(e) => setPetname(e?.target?.value)}
         placeholder={"Your super puppy name..."}
-        onChange={(e) => setPetname(e?.target?.value)}
         value={petname}
-        class="px-2 py-1 border(pink-400 4)"
+        class="px-2 py-1 border(blue-400 4) w-full sm:w-auto focus:outline-none focus:bg-blue-50"
         type="text"
         maxLength={30}
-        style={{ borderRadius: "0.3rem", minWidth: "30%" }}
+        style={{ borderRadius: "0.4rem", minWidth: "30%" }}
       />
       <a
-        class="hover:bg-pink-200"
+        class="hover:bg-blue-200"
         style={{
           width: "2.5rem",
           height: "2.5rem",
@@ -37,7 +38,7 @@ export default function InputCardPet() {
         }}
         href={petname ? "cardpet/" + petname : ""}
       >
-        <FaPaintBrush size={20} color="#ff4cc8" />
+        <FaPaintBrush size={20} color="#60a5fa" />
       </a>
     </div>
   );

@@ -59,28 +59,31 @@ export default function ChatAI(props: JSX.HTMLAttributes<HTMLButtonElement>) {
       <div
         style={{
           display: "flex",
-          flexWrap: "wrap",
           height: "2rem",
-          gap: "0.3rem",
         }}
       >
         <input
           placeholder="Tell me something..."
-          class="border-4"
+          class="border-4 focus:outline-none focus:bg-purple-50"
           type="text"
           value={userText}
-          onChange={handleUserText}
+          onInput={handleUserText}
           style={{
             borderRadius: "0.4rem",
-            padding: 5,
+            paddingLeft: 5,
+            paddingRight: 5,
             borderColor: "purple",
-            width: "80%",
+            width: "90%",
+            paddingBottom: "1rem",
+            paddingTop: "1rem",
           }}
         />
         <button
           onClick={() => getAIResponse()}
           {...props}
-          class="hover:bg-purple-200"
+          onKeyPress={() => getAIResponse()}
+          {...props}
+          class="hover:bg-purple-200 focus:outline-none"
           style={{
             height: "2.5rem",
             width: "2.5rem",
