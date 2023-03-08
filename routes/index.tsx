@@ -4,7 +4,6 @@ import { logo } from "../utils/assets.ts";
 import { listPosts } from "../utils/posts.ts";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import ChatAI from "../islands/ChatAI.tsx";
-import InputCardPet from "../islands/InputCardPet.tsx";
 import { Head } from "$fresh/runtime.ts";
 
 export const handler: Handlers = {
@@ -48,7 +47,7 @@ export default function Home(props: PageProps) {
                   lovecoding it
                 </a>
               </strong>
-              , specialist in frontend. This blog is made with Deno,Deno fresh,
+              , specialist in frontend. This blog is made with Deno, Deno fresh,
               Preact and Twind.
             </h2>
           </header>
@@ -57,7 +56,7 @@ export default function Home(props: PageProps) {
             style={{ alignItems: "center", gap: "2rem" }}
           >
             <img
-              class="pt-3"
+              class="pt-3 avatar"
               src={logo}
               width={150}
               style={{ borderRadius: "50%" }}
@@ -101,6 +100,9 @@ export default function Home(props: PageProps) {
               </a>
             </div>
           </div>
+          <h3 class="text-blue-600 text-2xl font-bold pt-14">
+            Last Posts ✍🏽
+          </h3>
           {posts.map((post: Post) => (
             <a href={`/blog/${post.id}`}>
               <article
@@ -114,21 +116,25 @@ export default function Home(props: PageProps) {
               </article>
             </a>
           ))}
-          <div class="py-10">
-            <h3 class="text-blue-600 text-2xl font-bold pt-4 pb-3">
-              Generate your random doggy card
-            </h3>
-            <div class="py-5">
-              <InputCardPet />
-            </div>
+          <div class="py-10 flex items-center justify-center">
+            <a
+              href="/generatedog"
+              class="border-2 border-pink-900 p-1 rounded-md bg-pink-200 hover:bg-pink-300"
+            >
+              <h3>
+                🐾 Generate your random doggy card 🐾
+              </h3>
+            </a>
           </div>
           <div>
-            <h3 class="text-purple-800 text-2xl font-bold pt-4 pb-3">
-              Talk to me
+            <h3 class="text-purple-800 text-2xl font-bold pt-4 pb-4">
+              Talk to me 💬
             </h3>
             <ChatAI />
           </div>
         </main>
+        <footer>
+        </footer>
       </div>
     </>
   );

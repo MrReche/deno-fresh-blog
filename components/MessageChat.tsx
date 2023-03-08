@@ -1,7 +1,7 @@
-import { JSX } from "preact";
+import { ComponentChild, JSX, VNode } from "preact";
 
 export default function MessageChat(
-  props: JSX.HTMLAttributes<HTMLButtonElement>,
+  props: { type: string; text: string | null | undefined },
 ) {
   return (
     <div

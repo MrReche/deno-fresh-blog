@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 import MessageChat from "../components/MessageChat.tsx";
 import { getChatAI } from "../utils/openai.ts";
 
-export default function ChatAI(props: JSX.HTMLAttributes<HTMLButtonElement>) {
+export default function ChatAI() {
   const [userText, setUserText] = useState("");
   const [aiText, setAiText] = useState("");
   const [conversation, setConversation] = useState([{
@@ -80,9 +80,7 @@ export default function ChatAI(props: JSX.HTMLAttributes<HTMLButtonElement>) {
         />
         <button
           onClick={() => getAIResponse()}
-          {...props}
           onKeyPress={() => getAIResponse()}
-          {...props}
           class="hover:bg-purple-200 focus:outline-none"
           style={{
             height: "2.5rem",
